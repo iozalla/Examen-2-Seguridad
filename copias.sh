@@ -32,9 +32,6 @@ function subirIncremental() {
 	#statements
 }
 
-
-
-
 function main(){
 
     opcionmenuppal=0
