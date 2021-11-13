@@ -83,7 +83,7 @@ createVirtualhost(){
   echo "Ficheros copiados a /var/www/prueba/public_html"
   echo "Creando localhost "
   sudo cp ports.conf /etc/apache2/				            #copiamos la configuracion de los puertos a su sitio
-  sudo cp prueba.conf/etc/apache2/sites-available  #copiamos la configuracion de la web a su sitio
+  sudo cp prueba.conf /etc/apache2/sites-available  #copiamos la configuracion de la web a su sitio
   sudo a2ensite prueba.conf                        #hacemos el link con la configuracion
   sudo service apache2 restart                        #reiniciamos apache2
   echo -e "${GREEN}LOCALHOST creado ${NC}"
