@@ -34,11 +34,11 @@ configurarSSL(){
     sudo rm /etc/apache2/conf-available/ssl-params.conf
     sudo \cp -r ssl-params.conf /etc/apache2/conf-available/
     sudo \cp -r /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak #por si algo va mal
-    echo "${RED}EN EL ARCHIVO /etc/apache2/sites-available/default-ssl.conf TIENES QUE EDITAR LAS LINEAS DE SERVER ADMIN Y SERVER NAME CON LO QUE PUSISTRE EN EL CERTIFICADO ${NC}"
+    echo -e "${RED}EN EL ARCHIVO /etc/apache2/sites-available/default-ssl.conf TIENES QUE EDITAR LAS LINEAS DE SERVER ADMIN Y SERVER NAME CON LO QUE PUSISTRE EN EL CERTIFICADO ${NC}"
     sudo \cp -r default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
-    sudo \cp -r 000-default.conf /etc/apache2/sites-available/000-default.conf
-    read -p "IP externa de tu server: " IP
-    sudo awk "NR==3{print ${IP}}1" /etc/apache2/sites-available/000-default.conf
+    #sudo \cp -r 000-default.conf /etc/apache2/sites-available/000-default.conf
+    #read -p "IP externa de tu server: " IP
+    #sudo awk "NR==3{print ${IP}}1" /etc/apache2/sites-available/000-default.conf
 }
 
 
@@ -104,7 +104,7 @@ function main(){
         echo -e "${YELLOW}1) crearCertificado "
         echo -e "2) configurarSSL "
         echo -e "3) gestionarFirewall    "
-        echo -e "3) habilitarCambios    "
+        echo -e "4) habilitarCambios    "
 
 
 
