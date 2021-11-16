@@ -45,7 +45,7 @@ configurarSSL(){
 
 
 ###########################################################
-#                  3) GESTIONAR FIREWALL                   #
+#                  3) GESTIONAR FIREWALL                  #
 ###########################################################
 
 gestionarFirewall(){
@@ -55,9 +55,11 @@ gestionarFirewall(){
 }
 
 ###########################################################
-#                  4) habilitarCambios                     #
+#                  4) habilitarCambios                    #
 ###########################################################
 habilitarCambios(){
+sudo rm /var/www/html/index.html
+sudo \cp -r index.html /var/www/html
 sudo a2enmod ssl
 sudo a2enmod headers
 sudo a2ensite default-ssl
