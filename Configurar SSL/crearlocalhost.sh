@@ -21,6 +21,7 @@ PURPLE='\033[0;35m'
 ###########################################################
 crearCertificado(){
 
+
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/certificadoNuevo.key -out /etc/ssl/certs/certificadoNuevo.crt
 
 }
@@ -31,6 +32,7 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/privat
 #                  2) CONFIGURAR SSL                    #
 ###########################################################
 configurarSSL(){
+    sudo apt-get install apache2
     sudo rm /etc/apache2/conf-available/ssl-params.conf
     sudo \cp -r ssl-params.conf /etc/apache2/conf-available/
     sudo \cp -r /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak #por si algo va mal

@@ -29,7 +29,7 @@ function copiaIncremental(){
 }
 function subirIncremental() {
 	rsync -avh /var/tmp/copia/ $usuario"@"$ip":"$dirSubida
-	#statements
+	
 }
 
 function main(){
