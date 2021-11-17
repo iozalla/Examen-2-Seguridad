@@ -109,6 +109,9 @@ function main(){
         echo -e "2) configurarSSL "
         echo -e "3) gestionarFirewall    "
         echo -e "4) habilitarCambios    "
+        echo -e "5) todo    "
+        echo -e "6) fin    "
+
 
 
 
@@ -124,7 +127,8 @@ function main(){
         2) configurarSSL;;
         3) gestionarFirewall;;
         4) habilitarCambios;;
-        5) fin;;
+        5)todo;;
+        6) fin;;
 
         *) ;;
 
