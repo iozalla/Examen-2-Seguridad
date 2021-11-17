@@ -59,7 +59,7 @@ gestionarFirewall(){
 ###########################################################
 habilitarCambios(){
 sudo rm /var/www/html/index.html
-sudo \cp -r index.html /var/www/html
+sudo \cp -vr index.html /var/www/html
 sudo a2enmod ssl
 sudo a2enmod headers
 sudo a2ensite default-ssl
