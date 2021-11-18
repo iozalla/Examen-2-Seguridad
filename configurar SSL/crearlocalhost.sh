@@ -37,7 +37,7 @@ configurarSSL(){
     sudo \cp -r ssl-params.conf /etc/apache2/conf-available/
     sudo \cp -r /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak #por si algo va mal
     echo -e "${RED}EN EL ARCHIVO /etc/apache2/sites-available/default-ssl.conf TIENES QUE EDITAR LAS LINEAS DE SERVER ADMIN Y SERVER NAME CON LO QUE PUSISTRE EN EL CERTIFICADO ${NC}"
-    echo -e '/etc/apache2/sites-available/000-default.conf añadir la linea Redirect "/" "TU IP"'
+    echo -e '/etc/apache2/sites-available/000-default.conf añadir la linea (Redirect "/" "TU IP")'
     echo -e "${NC}"
 
     sudo \cp -r default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
