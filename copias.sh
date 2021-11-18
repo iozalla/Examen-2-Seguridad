@@ -24,12 +24,13 @@ function copiaIncremental(){
     sudo rsync -avh --compare-dest=/var/tmp/copia/ $dirCopia /var/tmp/copia/
 		echo "sudo rsync -avh /var/tmp/copia/ $usuario"@"$ip":"$dirSubida"
     rsync -avh /var/tmp/copia/ $usuario"@"$ip":"$dirSubida
+		#scp -r /var/tmp/copia/ $usuario"@"$ip":"$dirSubida
     #sudo rm -r /var/tmp/copia
     exit 0
 }
 function subirIncremental() {
 	rsync -avh /var/tmp/copia/ $usuario"@"$ip":"$dirSubida
-	
+
 }
 
 function main(){
