@@ -97,6 +97,11 @@ function fin()
     exit 0
   fi
 }
+function export(){
+read -p "¿Que clave quieres exportar?\n"
+gpg --export-secret-key name > ~/clavePublica.asc
+echo-e "${GREEN}Exportado a ~/clavePublica.asc${NC}"
+}
 
 
 
@@ -119,12 +124,15 @@ function main(){
         echo -e "5) verificarArchivo"
         echo -e "6) encriptar"
         echo -e "7) desencriptar"
+	
 
         echo -e "8) importar claves"
+	echo -e "9) EXPORTAR claves"
+	
 
 
 
-				echo -e "9) Fin  "
+				echo -e "10) Fin  "
 
         echo ""
         read -p "Elige una opcion: " opcionmenuppal
@@ -140,7 +148,8 @@ function main(){
         6) encriptar;;
         7) desencriptar;;
         8) importKey;;
-        9) fin;;
+	9) export;;
+        10) fin;;
 
         *) ;;
 
