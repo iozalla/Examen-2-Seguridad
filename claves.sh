@@ -99,8 +99,10 @@ function fin()
 }
 function export(){
 read -p "¿Que clave quieres exportar?\n"
-gpg --export-secret-key name > ~/clavePublica.asc
-echo-e "${GREEN}Exportado a ~/clavePublica.asc${NC}"
+gpg --export -a iozalla001@ikasle.ehu.eus>~/Desktop/publi.asc
+gpg --export-secret-key name > ~/Desktop/clavePriva.asc
+echo-e "${GREEN}Exportado a ~/clavePrivada.asc"
+echo-e "${GREEN}Exportado a ~/publi.asc${NC}"
 }
 
 
@@ -124,11 +126,11 @@ function main(){
         echo -e "5) verificarArchivo"
         echo -e "6) encriptar"
         echo -e "7) desencriptar"
-	
+
 
         echo -e "8) importar claves"
 	echo -e "9) EXPORTAR claves"
-	
+
 
 
 
